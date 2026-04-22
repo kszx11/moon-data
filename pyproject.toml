@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moon-data"
+version = "0.1.0"
+description = "CLI for current moon data and upcoming lunar events."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "skyfield>=1.49",
+]
+
+[project.scripts]
+moon-data = "moon_data.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["moon_data*"]
